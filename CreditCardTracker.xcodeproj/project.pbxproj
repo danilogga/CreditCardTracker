@@ -25,6 +25,7 @@
 		AA000FAA2F700000001A9C60 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000FAB2F700000001A9C60 /* CurrencyFormatter.swift */; };
 		AA0010AA2F700000001A9C60 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0010AB2F700000001A9C60 /* Color+Hex.swift */; };
 		AA0011AA2F700000001A9C60 /* PhosphorToSFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0011AB2F700000001A9C60 /* PhosphorToSFSymbol.swift */; };
+		AA0030AA2F700000001A9C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0030AB2F700000001A9C60 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		AA000FAB2F700000001A9C60 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		AA0010AB2F700000001A9C60 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		AA0011AB2F700000001A9C60 /* PhosphorToSFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosphorToSFSymbol.swift; sourceTree = "<group>"; };
+		AA0030AB2F700000001A9C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				9F710ED32F64BECD006D6FCD /* Secrets.swift */,
 				AA0001AB2F700000001A9C60 /* CreditCardTrackerApp.swift */,
 				AA0002AB2F700000001A9C60 /* ContentView.swift */,
+				AA0030AB2F700000001A9C60 /* Assets.xcassets */,
 				AA0021AB2F700000001A9C60 /* Models */,
 				AA0022AB2F700000001A9C60 /* Networking */,
 				AA0023AB2F700000001A9C60 /* ViewModels */,
@@ -202,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0030AA2F700000001A9C60 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +369,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cartões";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -409,6 +414,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cartões";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
