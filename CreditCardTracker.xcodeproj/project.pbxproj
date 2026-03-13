@@ -6,17 +6,48 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXFileReference section */
-		9F8DB03C2F637FFA001A9C60 /* CreditCardTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
+/* Begin PBXBuildFile section */
+		9F710ED42F64BECD006D6FCD /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F710ED32F64BECD006D6FCD /* Secrets.swift */; };
+		AA0001AA2F700000001A9C60 /* CreditCardTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0001AB2F700000001A9C60 /* CreditCardTrackerApp.swift */; };
+		AA0002AA2F700000001A9C60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0002AB2F700000001A9C60 /* ContentView.swift */; };
+		AA0003AA2F700000001A9C60 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0003AB2F700000001A9C60 /* DashboardResponse.swift */; };
+		AA0004AA2F700000001A9C60 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0004AB2F700000001A9C60 /* Category.swift */; };
+		AA0005AA2F700000001A9C60 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0005AB2F700000001A9C60 /* Expense.swift */; };
+		AA0006AA2F700000001A9C60 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0006AB2F700000001A9C60 /* Pagination.swift */; };
+		AA0007AA2F700000001A9C60 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0007AB2F700000001A9C60 /* APIError.swift */; };
+		AA0008AA2F700000001A9C60 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0008AB2F700000001A9C60 /* APIClient.swift */; };
+		AA0009AA2F700000001A9C60 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */; };
+		AA000AAA2F700000001A9C60 /* MonthSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000AAB2F700000001A9C60 /* MonthSelectorView.swift */; };
+		AA000BAA2F700000001A9C60 /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000BAB2F700000001A9C60 /* DonutChartView.swift */; };
+		AA000CAA2F700000001A9C60 /* CategoryBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000CAB2F700000001A9C60 /* CategoryBarChartView.swift */; };
+		AA000DAA2F700000001A9C60 /* ExpensesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000DAB2F700000001A9C60 /* ExpensesListView.swift */; };
+		AA000EAA2F700000001A9C60 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000EAB2F700000001A9C60 /* DashboardView.swift */; };
+		AA000FAA2F700000001A9C60 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000FAB2F700000001A9C60 /* CurrencyFormatter.swift */; };
+		AA0010AA2F700000001A9C60 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0010AB2F700000001A9C60 /* Color+Hex.swift */; };
+		AA0011AA2F700000001A9C60 /* PhosphorToSFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0011AB2F700000001A9C60 /* PhosphorToSFSymbol.swift */; };
+/* End PBXBuildFile section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		9F8DB03E2F637FFA001A9C60 /* CreditCardTracker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CreditCardTracker;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXFileReference section */
+		9F710ED32F64BECD006D6FCD /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		9F8DB03C2F637FFA001A9C60 /* CreditCardTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0001AB2F700000001A9C60 /* CreditCardTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTrackerApp.swift; sourceTree = "<group>"; };
+		AA0002AB2F700000001A9C60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0003AB2F700000001A9C60 /* DashboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardResponse.swift; sourceTree = "<group>"; };
+		AA0004AB2F700000001A9C60 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AA0005AB2F700000001A9C60 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		AA0006AB2F700000001A9C60 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		AA0007AB2F700000001A9C60 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AA0008AB2F700000001A9C60 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		AA000AAB2F700000001A9C60 /* MonthSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorView.swift; sourceTree = "<group>"; };
+		AA000BAB2F700000001A9C60 /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
+		AA000CAB2F700000001A9C60 /* CategoryBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBarChartView.swift; sourceTree = "<group>"; };
+		AA000DAB2F700000001A9C60 /* ExpensesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListView.swift; sourceTree = "<group>"; };
+		AA000EAB2F700000001A9C60 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		AA000FAB2F700000001A9C60 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		AA0010AB2F700000001A9C60 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		AA0011AB2F700000001A9C60 /* PhosphorToSFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosphorToSFSymbol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9F8DB0392F637FFA001A9C60 /* Frameworks */ = {
@@ -32,7 +63,7 @@
 		9F8DB0332F637FFA001A9C60 = {
 			isa = PBXGroup;
 			children = (
-				9F8DB03E2F637FFA001A9C60 /* CreditCardTracker */,
+				AA0020AB2F700000001A9C60 /* CreditCardTracker */,
 				9F8DB03D2F637FFA001A9C60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +74,71 @@
 				9F8DB03C2F637FFA001A9C60 /* CreditCardTracker.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0020AB2F700000001A9C60 /* CreditCardTracker */ = {
+			isa = PBXGroup;
+			children = (
+				9F710ED32F64BECD006D6FCD /* Secrets.swift */,
+				AA0001AB2F700000001A9C60 /* CreditCardTrackerApp.swift */,
+				AA0002AB2F700000001A9C60 /* ContentView.swift */,
+				AA0021AB2F700000001A9C60 /* Models */,
+				AA0022AB2F700000001A9C60 /* Networking */,
+				AA0023AB2F700000001A9C60 /* ViewModels */,
+				AA0024AB2F700000001A9C60 /* Views */,
+				AA0025AB2F700000001A9C60 /* Utilities */,
+			);
+			path = CreditCardTracker;
+			sourceTree = "<group>";
+		};
+		AA0021AB2F700000001A9C60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0003AB2F700000001A9C60 /* DashboardResponse.swift */,
+				AA0004AB2F700000001A9C60 /* Category.swift */,
+				AA0005AB2F700000001A9C60 /* Expense.swift */,
+				AA0006AB2F700000001A9C60 /* Pagination.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0022AB2F700000001A9C60 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AA0007AB2F700000001A9C60 /* APIError.swift */,
+				AA0008AB2F700000001A9C60 /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AA0023AB2F700000001A9C60 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA0024AB2F700000001A9C60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA000AAB2F700000001A9C60 /* MonthSelectorView.swift */,
+				AA000BAB2F700000001A9C60 /* DonutChartView.swift */,
+				AA000CAB2F700000001A9C60 /* CategoryBarChartView.swift */,
+				AA000DAB2F700000001A9C60 /* ExpensesListView.swift */,
+				AA000EAB2F700000001A9C60 /* DashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0025AB2F700000001A9C60 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA000FAB2F700000001A9C60 /* CurrencyFormatter.swift */,
+				AA0010AB2F700000001A9C60 /* Color+Hex.swift */,
+				AA0011AB2F700000001A9C60 /* PhosphorToSFSymbol.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +155,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9F8DB03E2F637FFA001A9C60 /* CreditCardTracker */,
 			);
 			name = CreditCardTracker;
 			packageProductDependencies = (
@@ -119,6 +212,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0001AA2F700000001A9C60 /* CreditCardTrackerApp.swift in Sources */,
+				9F710ED42F64BECD006D6FCD /* Secrets.swift in Sources */,
+				AA0002AA2F700000001A9C60 /* ContentView.swift in Sources */,
+				AA0003AA2F700000001A9C60 /* DashboardResponse.swift in Sources */,
+				AA0004AA2F700000001A9C60 /* Category.swift in Sources */,
+				AA0005AA2F700000001A9C60 /* Expense.swift in Sources */,
+				AA0006AA2F700000001A9C60 /* Pagination.swift in Sources */,
+				AA0007AA2F700000001A9C60 /* APIError.swift in Sources */,
+				AA0008AA2F700000001A9C60 /* APIClient.swift in Sources */,
+				AA0009AA2F700000001A9C60 /* DashboardViewModel.swift in Sources */,
+				AA000AAA2F700000001A9C60 /* MonthSelectorView.swift in Sources */,
+				AA000BAA2F700000001A9C60 /* DonutChartView.swift in Sources */,
+				AA000CAA2F700000001A9C60 /* CategoryBarChartView.swift in Sources */,
+				AA000DAA2F700000001A9C60 /* ExpensesListView.swift in Sources */,
+				AA000EAA2F700000001A9C60 /* DashboardView.swift in Sources */,
+				AA000FAA2F700000001A9C60 /* CurrencyFormatter.swift in Sources */,
+				AA0010AA2F700000001A9C60 /* Color+Hex.swift in Sources */,
+				AA0011AA2F700000001A9C60 /* PhosphorToSFSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

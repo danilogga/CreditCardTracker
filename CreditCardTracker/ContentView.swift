@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var viewModel = DashboardViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            DashboardView()
         }
-        .padding()
+        .environment(viewModel)
+        .task {
+            await viewModel.loadDashboard()
+        }
     }
 }
 
