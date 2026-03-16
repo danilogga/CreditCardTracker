@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9F710ED42F64BECD006D6FCD /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F710ED32F64BECD006D6FCD /* Secrets.swift */; };
+		9F8334372F68A29600F8A784 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8334362F68A29600F8A784 /* WidgetKit.framework */; };
+		9F8334392F68A29600F8A784 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8334382F68A29600F8A784 /* SwiftUI.framework */; };
+		9F8334482F68A29700F8A784 /* CreditCardWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9F8334342F68A29600F8A784 /* CreditCardWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9F8334522F68A50D00F8A784 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8334512F68A50D00F8A784 /* WidgetKit.framework */; };
 		AA0001AA2F700000001A9C60 /* CreditCardTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0001AB2F700000001A9C60 /* CreditCardTrackerApp.swift */; };
 		AA0002AA2F700000001A9C60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0002AB2F700000001A9C60 /* ContentView.swift */; };
 		AA0003AA2F700000001A9C60 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0003AB2F700000001A9C60 /* DashboardResponse.swift */; };
@@ -28,8 +32,37 @@
 		AA0030AA2F700000001A9C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0030AB2F700000001A9C60 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9F8334462F68A29700F8A784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F8DB0342F637FFA001A9C60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F8334332F68A29600F8A784;
+			remoteInfo = CreditCardWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F8334492F68A29700F8A784 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9F8334482F68A29700F8A784 /* CreditCardWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9F710ED32F64BECD006D6FCD /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		9F8334342F68A29600F8A784 /* CreditCardWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CreditCardWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8334362F68A29600F8A784 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9F8334382F68A29600F8A784 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9F8334502F68A4C700F8A784 /* CreditCardWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreditCardWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
+		9F8334512F68A50D00F8A784 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/WidgetKit.framework; sourceTree = DEVELOPER_DIR; };
 		9F8DB03C2F637FFA001A9C60 /* CreditCardTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0001AB2F700000001A9C60 /* CreditCardTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTrackerApp.swift; sourceTree = "<group>"; };
 		AA0002AB2F700000001A9C60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +84,38 @@
 		AA0030AB2F700000001A9C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9F83344C2F68A29700F8A784 /* Exceptions for "CreditCardWidgetExtension" folder in "CreditCardWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9F8334332F68A29600F8A784 /* CreditCardWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9F83343A2F68A29600F8A784 /* CreditCardWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9F83344C2F68A29700F8A784 /* Exceptions for "CreditCardWidgetExtension" folder in "CreditCardWidgetExtensionExtension" target */,
+			);
+			path = CreditCardWidgetExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		9F8334312F68A29600F8A784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8334522F68A50D00F8A784 /* WidgetKit.framework in Frameworks */,
+				9F8334392F68A29600F8A784 /* SwiftUI.framework in Frameworks */,
+				9F8334372F68A29600F8A784 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9F8DB0392F637FFA001A9C60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,10 +126,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F8334352F68A29600F8A784 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F8334362F68A29600F8A784 /* WidgetKit.framework */,
+				9F8334512F68A50D00F8A784 /* WidgetKit.framework */,
+				9F8334382F68A29600F8A784 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F8DB0332F637FFA001A9C60 = {
 			isa = PBXGroup;
 			children = (
 				AA0020AB2F700000001A9C60 /* CreditCardTracker */,
+				9F83343A2F68A29600F8A784 /* CreditCardWidgetExtension */,
+				9F8334352F68A29600F8A784 /* Frameworks */,
 				9F8DB03D2F637FFA001A9C60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				9F8DB03C2F637FFA001A9C60 /* CreditCardTracker.app */,
+				9F8334342F68A29600F8A784 /* CreditCardWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +167,7 @@
 				AA0023AB2F700000001A9C60 /* ViewModels */,
 				AA0024AB2F700000001A9C60 /* Views */,
 				AA0025AB2F700000001A9C60 /* Utilities */,
+				9F8334502F68A4C700F8A784 /* CreditCardWidgetExtensionExtension.entitlements */,
 			);
 			path = CreditCardTracker;
 			sourceTree = "<group>";
@@ -147,6 +225,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F8334332F68A29600F8A784 /* CreditCardWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F83344D2F68A29700F8A784 /* Build configuration list for PBXNativeTarget "CreditCardWidgetExtensionExtension" */;
+			buildPhases = (
+				9F8334302F68A29600F8A784 /* Sources */,
+				9F8334312F68A29600F8A784 /* Frameworks */,
+				9F8334322F68A29600F8A784 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9F83343A2F68A29600F8A784 /* CreditCardWidgetExtension */,
+			);
+			name = CreditCardWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = CreditCardWidgetExtensionExtension;
+			productReference = 9F8334342F68A29600F8A784 /* CreditCardWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9F8DB03B2F637FFA001A9C60 /* CreditCardTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8DB0472F637FFB001A9C60 /* Build configuration list for PBXNativeTarget "CreditCardTracker" */;
@@ -154,10 +254,12 @@
 				9F8DB0382F637FFA001A9C60 /* Sources */,
 				9F8DB0392F637FFA001A9C60 /* Frameworks */,
 				9F8DB03A2F637FFA001A9C60 /* Resources */,
+				9F8334492F68A29700F8A784 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9F8334472F68A29700F8A784 /* PBXTargetDependency */,
 			);
 			name = CreditCardTracker;
 			packageProductDependencies = (
@@ -176,6 +278,9 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					9F8334332F68A29600F8A784 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					9F8DB03B2F637FFA001A9C60 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -196,11 +301,19 @@
 			projectRoot = "";
 			targets = (
 				9F8DB03B2F637FFA001A9C60 /* CreditCardTracker */,
+				9F8334332F68A29600F8A784 /* CreditCardWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F8334322F68A29600F8A784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9F8DB03A2F637FFA001A9C60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +325,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F8334302F68A29600F8A784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9F8DB0382F637FFA001A9C60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,7 +359,82 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9F8334472F68A29700F8A784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F8334332F68A29600F8A784 /* CreditCardWidgetExtensionExtension */;
+			targetProxy = 9F8334462F68A29700F8A784 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9F83344A2F68A29700F8A784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CreditCardWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5YJFEUC2H5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CreditCardWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CreditCardWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.danilo.CreditCardTracker.CreditCardWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F83344B2F68A29700F8A784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CreditCardWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5YJFEUC2H5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CreditCardWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CreditCardWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.danilo.CreditCardTracker.CreditCardWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		9F8DB0452F637FFB001A9C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CreditCardTracker/CreditCardTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5YJFEUC2H5;
@@ -406,6 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CreditCardTracker/CreditCardTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5YJFEUC2H5;
@@ -449,6 +646,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F83344D2F68A29700F8A784 /* Build configuration list for PBXNativeTarget "CreditCardWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F83344A2F68A29700F8A784 /* Debug */,
+				9F83344B2F68A29700F8A784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9F8DB0372F637FFA001A9C60 /* Build configuration list for PBXProject "CreditCardTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

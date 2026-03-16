@@ -7,4 +7,5 @@ struct CategoryData: Codable, Identifiable {
     let symbol: String  // Phosphor icon name
     let limitCents: Int?
     let spentCents: Int
+    let favorite: Bool?
 }

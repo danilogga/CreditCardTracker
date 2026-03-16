@@ -1,13 +1,19 @@
 import Foundation
 import Observation
+import WidgetKit
 
 @Observable class DashboardViewModel {
-    var month: String = UserDefaults.standard.string(forKey: "lastSelectedMonth") ?? {
+    private static let sharedDefaults = UserDefaults(suiteName: "group.creditcardtracker") ?? .standard
+
+    var month: String = (UserDefaults(suiteName: "group.creditcardtracker") ?? .standard).string(forKey: "lastSelectedMonth") ?? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM"
         return formatter.string(from: Date())
     }() {
-        didSet { UserDefaults.standard.set(month, forKey: "lastSelectedMonth") }
+        didSet {
+            DashboardViewModel.sharedDefaults.set(month, forKey: "lastSelectedMonth")
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
 
     var invoiceClosed: Bool = false
@@ -23,7 +29,6 @@ import Observation
 
     var sortedCategories: [CategoryData] {
         categories
-            .filter { $0.spentCents > 0 }
             .sorted { $0.name.localizedCompare($1.name) == .orderedAscending }
     }
 
@@ -45,6 +50,7 @@ import Observation
         do {
             let response = try await APIClient.shared.fetchDashboard(month: month, page: 1)
             apply(response: response, appending: false)
+            WidgetCenter.shared.reloadAllTimelines()
         } catch {
             errorMessage = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
         }
