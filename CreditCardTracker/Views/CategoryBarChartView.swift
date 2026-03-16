@@ -25,7 +25,9 @@ private struct CategoryProgressRow: View {
 
     private var barColor: Color {
         guard let p = progress else { return .secondary.opacity(0.4) }
-        return p >= 0.9 ? .red : .green
+        if p >= 0.9 { return .red }
+        if p >= 0.7 { return Color(red: 0.96, green: 0.65, blue: 0.14) }
+        return .green
     }
 
     var body: some View {

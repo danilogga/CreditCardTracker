@@ -5,12 +5,19 @@ struct DonutChartView: View {
     let totalSpentCents: Int
     let totalBudgetCents: Int
 
-    private var isOverBudget: Bool {
-        totalBudgetCents > 0 && totalSpentCents > totalBudgetCents
+    private var ratio: Double {
+        guard totalBudgetCents > 0 else { return 0 }
+        return Double(totalSpentCents) / Double(totalBudgetCents)
     }
 
     private var hasBudget: Bool {
         totalBudgetCents > 0
+    }
+
+    private var spentColor: Color {
+        if ratio >= 0.9 { return .red }
+        if ratio >= 0.7 { return Color(red: 0.96, green: 0.65, blue: 0.14) }
+        return .blue
     }
 
     private struct ChartSlice: Identifiable {
@@ -23,13 +30,13 @@ struct DonutChartView: View {
         if !hasBudget {
             return [ChartSlice(id: "spent", value: 1, color: .blue)]
         }
-        if isOverBudget {
-            return [ChartSlice(id: "spent", value: 1, color: .red)]
+        if ratio >= 1.0 {
+            return [ChartSlice(id: "spent", value: 1, color: spentColor)]
         }
         let spent = Double(totalSpentCents)
         let remaining = Double(totalBudgetCents - totalSpentCents)
         return [
-            ChartSlice(id: "spent", value: spent, color: .blue),
+            ChartSlice(id: "spent", value: spent, color: spentColor),
             ChartSlice(id: "remaining", value: remaining, color: Color.secondary.opacity(0.25))
         ]
     }
