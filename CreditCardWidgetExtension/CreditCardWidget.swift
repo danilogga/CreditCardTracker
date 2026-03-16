@@ -83,7 +83,7 @@ struct DashboardProvider: TimelineProvider {
         ]
         var request = URLRequest(url: comps.url!)
         request.setValue(
-            "Bearer 63e30757fbcc466867e7caf3bded14ab07d333edfd30a43a9492a0f6ec01682c",
+            "Bearer 48998b1d66d345a07de554077dc2024359225f81f84a7f5f1571325dbaced172",
             forHTTPHeaderField: "Authorization"
         )
         let (data, _) = try await URLSession.shared.data(for: request)
