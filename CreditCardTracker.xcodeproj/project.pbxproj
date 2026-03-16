@@ -21,6 +21,8 @@
 		AA0007AA2F700000001A9C60 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0007AB2F700000001A9C60 /* APIError.swift */; };
 		AA0008AA2F700000001A9C60 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0008AB2F700000001A9C60 /* APIClient.swift */; };
 		AA0009AA2F700000001A9C60 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */; };
+		BB0001AA2F800000001A9C60 /* AppLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0001AB2F800000001A9C60 /* AppLockViewModel.swift */; };
+		BB0002AA2F800000001A9C60 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0002AB2F800000001A9C60 /* LockScreenView.swift */; };
 		AA000AAA2F700000001A9C60 /* MonthSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000AAB2F700000001A9C60 /* MonthSelectorView.swift */; };
 		AA000BAA2F700000001A9C60 /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000BAB2F700000001A9C60 /* DonutChartView.swift */; };
 		AA000CAA2F700000001A9C60 /* CategoryBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000CAB2F700000001A9C60 /* CategoryBarChartView.swift */; };
@@ -73,6 +75,8 @@
 		AA0007AB2F700000001A9C60 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AA0008AB2F700000001A9C60 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		BB0001AB2F800000001A9C60 /* AppLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockViewModel.swift; sourceTree = "<group>"; };
+		BB0002AB2F800000001A9C60 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
 		AA000AAB2F700000001A9C60 /* MonthSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorView.swift; sourceTree = "<group>"; };
 		AA000BAB2F700000001A9C60 /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
 		AA000CAB2F700000001A9C60 /* CategoryBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBarChartView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */,
+				BB0001AB2F800000001A9C60 /* AppLockViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				AA000CAB2F700000001A9C60 /* CategoryBarChartView.swift */,
 				AA000DAB2F700000001A9C60 /* ExpensesListView.swift */,
 				AA000EAB2F700000001A9C60 /* DashboardView.swift */,
+				BB0002AB2F800000001A9C60 /* LockScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,6 +352,8 @@
 				AA0007AA2F700000001A9C60 /* APIError.swift in Sources */,
 				AA0008AA2F700000001A9C60 /* APIClient.swift in Sources */,
 				AA0009AA2F700000001A9C60 /* DashboardViewModel.swift in Sources */,
+				BB0001AA2F800000001A9C60 /* AppLockViewModel.swift in Sources */,
+				BB0002AA2F800000001A9C60 /* LockScreenView.swift in Sources */,
 				AA000AAA2F700000001A9C60 /* MonthSelectorView.swift in Sources */,
 				AA000BAA2F700000001A9C60 /* DonutChartView.swift in Sources */,
 				AA000CAA2F700000001A9C60 /* CategoryBarChartView.swift in Sources */,
@@ -566,6 +574,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cartões";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Autentique-se para acessar seus cartões.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -612,6 +621,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cartões";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Autentique-se para acessar seus cartões.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
