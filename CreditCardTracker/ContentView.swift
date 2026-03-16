@@ -1,36 +1,22 @@
+//
+//  ContentView.swift
+//  CreditCardTracker
+//
+//  Created by Danilo Carvalho on 12/03/26.
+//
+
 import SwiftUI
 
 struct ContentView: View {
     @State private var viewModel = DashboardViewModel()
-    @State private var lockViewModel = AppLockViewModel()
-    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
-        Group {
-            if lockViewModel.isUnlocked {
-                NavigationStack {
-                    DashboardView()
-                }
-                .environment(viewModel)
-                .task {
-                    await viewModel.loadDashboard()
-                }
-            } else {
-                LockScreenView(
-                    onAuthenticate: { lockViewModel.authenticate() },
-                    authFailed: lockViewModel.authFailed
-                )
-            }
+        NavigationStack {
+            DashboardView()
         }
-        .onChange(of: scenePhase) { _, newPhase in
-            if newPhase == .background {
-                lockViewModel.lock()
-            } else if newPhase == .active && !lockViewModel.isUnlocked {
-                lockViewModel.authenticate()
-            }
-        }
-        .onAppear {
-            lockViewModel.authenticate()
+        .environment(viewModel)
+        .task {
+            await viewModel.loadDashboard()
         }
     }
 }
