@@ -75,7 +75,7 @@ struct DashboardProvider: TimelineProvider {
 
     private func fetchEntry() async throws -> DashboardEntry {
         let month = selectedMonth()
-        var comps = URLComponents(string: "https://cartao-danilo.vercel.app/api/dashboard")!
+        var comps = URLComponents(string: Secrets.apiBaseURL)!
         comps.queryItems = [
             URLQueryItem(name: "month",    value: month),
             URLQueryItem(name: "page",     value: "1"),
@@ -83,7 +83,7 @@ struct DashboardProvider: TimelineProvider {
         ]
         var request = URLRequest(url: comps.url!)
         request.setValue(
-            "Bearer 48998b1d66d345a07de554077dc2024359225f81f84a7f5f1571325dbaced172",
+            "Bearer \(Secrets.apiToken)",
             forHTTPHeaderField: "Authorization"
         )
         let (data, _) = try await URLSession.shared.data(for: request)
