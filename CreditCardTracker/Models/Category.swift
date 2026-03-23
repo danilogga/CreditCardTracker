@@ -1,6 +1,6 @@
 import Foundation
 
-struct CategoryData: Codable, Identifiable {
+struct CategoryData: Codable, Identifiable, Hashable {
     let id: String
     let name: String
     let color: String   // hex "#RRGGBB"

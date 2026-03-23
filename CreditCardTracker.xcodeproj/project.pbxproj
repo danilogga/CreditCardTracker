@@ -32,6 +32,8 @@
 		AA0030AA2F700000001A9C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0030AB2F700000001A9C60 /* Assets.xcassets */; };
 		BB0001AA2F800000001A9C60 /* AppLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0001AB2F800000001A9C60 /* AppLockViewModel.swift */; };
 		BB0002AA2F800000001A9C60 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0002AB2F800000001A9C60 /* LockScreenView.swift */; };
+		CC0001AA2F900000001A9C60 /* CategoryExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0001AB2F900000001A9C60 /* CategoryExpensesView.swift */; };
+		CC0002AA2F900000001A9C60 /* CategoryExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002AB2F900000001A9C60 /* CategoryExpensesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		AA0030AB2F700000001A9C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0001AB2F800000001A9C60 /* AppLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockViewModel.swift; sourceTree = "<group>"; };
 		BB0002AB2F800000001A9C60 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		CC0001AB2F900000001A9C60 /* CategoryExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExpensesView.swift; sourceTree = "<group>"; };
+		CC0002AB2F900000001A9C60 /* CategoryExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExpensesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -201,6 +205,7 @@
 			children = (
 				AA0009AB2F700000001A9C60 /* DashboardViewModel.swift */,
 				BB0001AB2F800000001A9C60 /* AppLockViewModel.swift */,
+				CC0002AB2F900000001A9C60 /* CategoryExpensesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				AA000DAB2F700000001A9C60 /* ExpensesListView.swift */,
 				AA000EAB2F700000001A9C60 /* DashboardView.swift */,
 				BB0002AB2F800000001A9C60 /* LockScreenView.swift */,
+				CC0001AB2F900000001A9C60 /* CategoryExpensesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +368,8 @@
 				AA000FAA2F700000001A9C60 /* CurrencyFormatter.swift in Sources */,
 				AA0010AA2F700000001A9C60 /* Color+Hex.swift in Sources */,
 				AA0011AA2F700000001A9C60 /* PhosphorToSFSymbol.swift in Sources */,
+				CC0001AA2F900000001A9C60 /* CategoryExpensesView.swift in Sources */,
+				CC0002AA2F900000001A9C60 /* CategoryExpensesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

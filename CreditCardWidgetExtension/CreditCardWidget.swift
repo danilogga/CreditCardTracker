@@ -250,8 +250,9 @@ private struct CategoryRow: View {
 
     private var ratio: Double {
         guard let limit = category.limitCents, limit > 0 else { return 0 }
-        return min(Double(category.spentCents) / Double(limit), 1.0)
+        return Double(category.spentCents) / Double(limit)
     }
+    private var barRatio: Double { min(ratio, 1.0) }
     private var hasLimit: Bool {
         (category.limitCents ?? 0) > 0
     }
@@ -290,7 +291,7 @@ private struct CategoryRow: View {
                                 .frame(height: 3)
                             Capsule()
                                 .fill(barColor)
-                                .frame(width: geo.size.width * ratio, height: 3)
+                                .frame(width: geo.size.width * barRatio, height: 3)
                         }
                     }
                     .frame(height: 3)

@@ -53,7 +53,7 @@ struct ExpensesListView: View {
     }
 }
 
-private struct ExpenseRowView: View {
+struct ExpenseRowView: View {
     let expense: ExpenseData
     let formattedDate: String
 

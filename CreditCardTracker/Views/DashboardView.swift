@@ -36,13 +36,25 @@ struct DashboardView: View {
                 .padding(.top, 4)
 
                 // Donut chart
-                HStack {
-                    Spacer()
-                    DonutChartView(
-                        totalSpentCents: viewModel.totalSpentCents,
-                        totalBudgetCents: viewModel.totalBudgetCents
-                    )
-                    Spacer()
+                VStack(spacing: 8) {
+                    HStack {
+                        Spacer()
+                        DonutChartView(
+                            totalSpentCents: viewModel.totalSpentCents,
+                            totalBudgetCents: viewModel.totalBudgetCents
+                        )
+                        Spacer()
+                    }
+
+                    if viewModel.totalIgnoredCents > 0 {
+                        HStack(spacing: 4) {
+                            Image(systemName: "eye.slash")
+                                .font(.caption2)
+                            Text("\(CurrencyFormatter.format(cents: viewModel.totalIgnoredCents)) ignorados")
+                                .font(.caption)
+                        }
+                        .foregroundStyle(.secondary)
+                    }
                 }
 
                 // Categories section
@@ -71,6 +83,9 @@ struct DashboardView: View {
         }
         .refreshable {
             await viewModel.loadDashboard()
+        }
+        .navigationDestination(for: CategoryData.self) { category in
+            CategoryExpensesView(category: category, month: viewModel.month)
         }
     }
 }

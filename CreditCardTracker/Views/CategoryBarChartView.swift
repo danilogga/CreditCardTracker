@@ -6,7 +6,10 @@ struct CategoryBarChartView: View {
     var body: some View {
         VStack(spacing: 0) {
             ForEach(categories) { category in
-                CategoryProgressRow(category: category)
+                NavigationLink(value: category) {
+                    CategoryProgressRow(category: category)
+                }
+                .buttonStyle(.plain)
                 if category.id != categories.last?.id {
                     Divider().padding(.leading, 36)
                 }

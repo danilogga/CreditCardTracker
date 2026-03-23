@@ -6,13 +6,17 @@ actor APIClient {
     private let baseURL = Secrets.apiBaseURL
     private let token = Secrets.apiToken
 
-    func fetchDashboard(month: String, page: Int = 1, pageSize: Int = 15) async throws -> DashboardResponse {
+    func fetchDashboard(month: String, page: Int = 1, pageSize: Int = 15, categoryId: String? = nil) async throws -> DashboardResponse {
         var components = URLComponents(string: baseURL)
-        components?.queryItems = [
+        var queryItems = [
             URLQueryItem(name: "month", value: month),
             URLQueryItem(name: "page", value: String(page)),
             URLQueryItem(name: "pageSize", value: String(pageSize))
         ]
+        if let categoryId {
+            queryItems.append(URLQueryItem(name: "categoryId", value: categoryId))
+        }
+        components?.queryItems = queryItems
 
         guard let url = components?.url else {
             throw APIError.invalidURL

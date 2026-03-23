@@ -18,6 +18,7 @@ import WidgetKit
 
     var invoiceClosed: Bool = false
     var totalSpentCents: Int = 0
+    var totalIgnoredCents: Int = 0
     var categories: [CategoryData] = []
     var expenses: [ExpenseData] = []
     var pagination: PaginationData? = nil
@@ -83,6 +84,7 @@ import WidgetKit
     private func apply(response: DashboardResponse, appending: Bool) {
         invoiceClosed = response.invoiceClosed
         totalSpentCents = response.totalSpentCents
+        totalIgnoredCents = response.totalIgnoredCents
         categories = response.categories
         pagination = response.pagination
         currentPage = response.pagination.page
