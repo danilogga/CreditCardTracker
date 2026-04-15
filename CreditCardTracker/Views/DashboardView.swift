@@ -113,54 +113,56 @@ private struct SkeletonView: View {
     @State private var opacity: Double = 0.4
 
     var body: some View {
-        VStack(spacing: 20) {
-            RoundedRectangle(cornerRadius: 100)
-                .fill(Color.secondary.opacity(0.3))
-                .frame(width: 140, height: 28)
+        ScrollView {
+            VStack(spacing: 20) {
+                RoundedRectangle(cornerRadius: 100)
+                    .fill(Color.secondary.opacity(0.3))
+                    .frame(width: 140, height: 28)
 
-            Circle()
-                .fill(Color.secondary.opacity(0.3))
-                .frame(width: 200, height: 200)
+                Circle()
+                    .fill(Color.secondary.opacity(0.3))
+                    .frame(width: 200, height: 200)
 
-            VStack(spacing: 10) {
-                ForEach(0..<4, id: \.self) { _ in
-                    RoundedRectangle(cornerRadius: 6)
-                        .fill(Color.secondary.opacity(0.3))
-                        .frame(height: 16)
-                }
-            }
-            .padding(.horizontal, 24)
-
-            VStack(spacing: 12) {
-                ForEach(0..<5, id: \.self) { _ in
-                    HStack(spacing: 12) {
-                        Circle()
+                VStack(spacing: 10) {
+                    ForEach(0..<4, id: \.self) { _ in
+                        RoundedRectangle(cornerRadius: 6)
                             .fill(Color.secondary.opacity(0.3))
-                            .frame(width: 36, height: 36)
-                        VStack(alignment: .leading, spacing: 6) {
-                            RoundedRectangle(cornerRadius: 4)
-                                .fill(Color.secondary.opacity(0.3))
-                                .frame(height: 12)
-                            RoundedRectangle(cornerRadius: 4)
-                                .fill(Color.secondary.opacity(0.3))
-                                .frame(width: 80, height: 10)
-                        }
-                        Spacer()
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(Color.secondary.opacity(0.3))
-                            .frame(width: 60, height: 12)
+                            .frame(maxWidth: .infinity, minHeight: 16, maxHeight: 16)
                     }
-                    .padding(.horizontal, 16)
+                }
+                .padding(.horizontal, 24)
+
+                VStack(spacing: 12) {
+                    ForEach(0..<5, id: \.self) { _ in
+                        HStack(spacing: 12) {
+                            Circle()
+                                .fill(Color.secondary.opacity(0.3))
+                                .frame(width: 36, height: 36)
+                            VStack(alignment: .leading, spacing: 6) {
+                                RoundedRectangle(cornerRadius: 4)
+                                    .fill(Color.secondary.opacity(0.3))
+                                    .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12)
+                                RoundedRectangle(cornerRadius: 4)
+                                    .fill(Color.secondary.opacity(0.3))
+                                    .frame(width: 80, height: 10)
+                            }
+                            Spacer()
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(Color.secondary.opacity(0.3))
+                                .frame(width: 60, height: 12)
+                        }
+                        .padding(.horizontal, 16)
+                    }
                 }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.top, 4)
+            .padding(.bottom, 24)
         }
-        .padding(.top, 24)
+        .scrollDisabled(true)
         .opacity(opacity)
-        .onAppear {
-            withAnimation(.easeInOut(duration: 0.9).repeatForever(autoreverses: true)) {
-                opacity = 1.0
-            }
-        }
+        .animation(.easeInOut(duration: 0.9).repeatForever(autoreverses: true), value: opacity)
+        .onAppear { opacity = 1.0 }
     }
 }
 

@@ -66,9 +66,11 @@ private struct CategoryProgressRow: View {
                         .fill(.secondary.opacity(0.15))
                         .frame(height: 8)
 
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(barColor)
-                        .frame(width: geo.size.width * (progress ?? 0), height: 8)
+                    if let p = progress, p > 0, geo.size.width > 0 {
+                        RoundedRectangle(cornerRadius: 4)
+                            .fill(barColor)
+                            .frame(width: geo.size.width * p, height: 8)
+                    }
                 }
             }
             .frame(height: 8)
