@@ -22,7 +22,7 @@ There is no CLI build or test setup. All development happens in Xcode.
 
 ## API
 
-- Endpoint: `GET https://cartao-danilo.vercel.app/api/dashboard`
+- Endpoint: `GET https://cartao-danilo.vercel.app/cartao/api/dashboard`
 - Auth: `Authorization: Bearer <token>` (token hardcoded in `APIClient.swift`)
 - Query params: `month=YYYY-MM`, `page`, `pageSize`
 - `amountCents` can be negative (refund). `limitCents` is nullable. `installmentCurrent/Total` are nullable (one-time purchase).
