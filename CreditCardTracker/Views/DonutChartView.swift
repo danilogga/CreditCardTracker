@@ -15,9 +15,8 @@ struct DonutChartView: View {
     }
 
     private var spentColor: Color {
-        if ratio >= 0.9 { return .red }
-        if ratio >= 0.7 { return Color(red: 0.96, green: 0.65, blue: 0.14) }
-        return .blue
+        if ratio > 1.1 { return .red }
+        return .green
     }
 
     private struct ChartSlice: Identifiable {
