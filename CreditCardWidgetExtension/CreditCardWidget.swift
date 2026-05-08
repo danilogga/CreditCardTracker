@@ -150,9 +150,8 @@ struct SmallWidgetView: View {
         return Double(entry.totalSpentCents) / Double(entry.totalBudgetCents)
     }
     private var accentColor: Color {
-        if ratio >= 0.9 { return .red }
-        if ratio >= 0.7 { return Color(red: 0.96, green: 0.65, blue: 0.14) }
-        return .blue
+        if ratio > 1.1 { return .red }
+        return .green
     }
     private struct Slice: Identifiable { let id: String; let value: Double; let color: Color }
     private var slices: [Slice] {
@@ -257,8 +256,7 @@ private struct CategoryRow: View {
         (category.limitCents ?? 0) > 0
     }
     private var barColor: Color {
-        if ratio >= 0.9 { return .red }
-        if ratio >= 0.7 { return Color(red: 0.96, green: 0.65, blue: 0.14) }
+        if ratio > 1.1 { return .red }
         return .green
     }
     private var catColor: Color {

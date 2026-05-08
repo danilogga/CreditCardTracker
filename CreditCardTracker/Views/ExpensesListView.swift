@@ -78,10 +78,10 @@ struct ExpenseRowView: View {
 
                     Spacer()
 
-                    Text(CurrencyFormatter.format(cents: abs(expense.amountCents)))
+                    Text((expense.amountCents < 0 ? "-" : "") + CurrencyFormatter.format(cents: abs(expense.amountCents)))
                         .font(.subheadline)
                         .fontWeight(.semibold)
-                        .foregroundStyle(expense.isRefund ? .green : .primary)
+                        .foregroundStyle(expense.amountCents < 0 ? .red : .primary)
                 }
 
                 HStack {

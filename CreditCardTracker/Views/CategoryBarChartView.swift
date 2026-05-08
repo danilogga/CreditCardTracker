@@ -23,7 +23,7 @@ private struct CategoryProgressRow: View {
 
     private var progress: Double? {
         guard let limit = category.limitCents, limit > 0 else { return nil }
-        return min(Double(category.spentCents) / Double(limit), 1.0)
+        return Double(category.spentCents) / Double(limit)
     }
 
     private var barColor: Color {
@@ -68,7 +68,7 @@ private struct CategoryProgressRow: View {
                     if let p = progress, p > 0, geo.size.width > 0 {
                         RoundedRectangle(cornerRadius: 4)
                             .fill(barColor)
-                            .frame(width: geo.size.width * p, height: 8)
+                            .frame(width: geo.size.width * min(p, 1.0), height: 8)
                     }
                 }
             }
