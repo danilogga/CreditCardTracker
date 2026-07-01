@@ -21,12 +21,19 @@ struct ExpenseData: Codable, Identifiable {
     let ignored: Bool
     let category: ExpenseCategoryData?
     let date: String
+    let cardholderName: String?
+    let cardType: String?
+    let cardLastFour: String?
+    let titularidade: String?
 
     enum CodingKeys: String, CodingKey {
         case id, merchant, amountCents, installmentCurrent, installmentTotal, ignored, category
         case date = "expenseDate"
+        case cardholderName, cardType, cardLastFour, titularidade
     }
 
     var displayName: String { merchant.nickname ?? merchant.name }
     var isRefund: Bool { amountCents < 0 }
+    var isAdditionalCardholder: Bool { titularidade != nil && titularidade != "Titular" }
+    var cardholderFirstName: String? { cardholderName?.components(separatedBy: " ").first }
 }

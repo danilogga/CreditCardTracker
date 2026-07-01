@@ -53,6 +53,20 @@ struct ExpensesListView: View {
     }
 }
 
+private func cardTypeSymbol(_ cardType: String) -> String {
+    let t = cardType.lowercased()
+    if t.contains("wallet") { return "wallet.pass" }
+    if t.contains("virtual") || t.contains("recorrente") { return "globe" }
+    return "creditcard"
+}
+
+private func cardTypeColor(_ cardType: String) -> Color {
+    let t = cardType.lowercased()
+    if t.contains("wallet") { return Color(hex: "#f97316") ?? .orange }
+    if t.contains("virtual") || t.contains("recorrente") { return Color(hex: "#8b5cf6") ?? .purple }
+    return Color(hex: "#14b8a6") ?? .teal
+}
+
 struct ExpenseRowView: View {
     let expense: ExpenseData
     let formattedDate: String
@@ -111,6 +125,41 @@ struct ExpenseRowView: View {
                             .background(Color.secondary.opacity(0.15))
                             .clipShape(Capsule())
                             .foregroundStyle(.secondary)
+                    }
+                }
+
+                if let lastFour = expense.cardLastFour {
+                    HStack {
+                        if let firstName = expense.cardholderFirstName {
+                            Text(firstName)
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+
+                            if expense.isAdditionalCardholder {
+                                Text("Adicional")
+                                    .font(.caption2)
+                                    .fontWeight(.medium)
+                                    .padding(.horizontal, 6)
+                                    .padding(.vertical, 2)
+                                    .background(Color.purple.opacity(0.12))
+                                    .foregroundStyle(Color.purple)
+                                    .clipShape(Capsule())
+                            }
+                        }
+
+                        Spacer()
+
+                        HStack(spacing: 4) {
+                            Text("••••\(lastFour)")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+
+                            if let cardType = expense.cardType {
+                                Image(systemName: cardTypeSymbol(cardType))
+                                    .font(.caption)
+                                    .foregroundStyle(cardTypeColor(cardType))
+                            }
+                        }
                     }
                 }
             }
